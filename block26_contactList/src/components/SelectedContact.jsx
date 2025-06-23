@@ -27,11 +27,12 @@ if (!contact) {
   }
 
 return (
-        <div>
+        contact.name ? ( <div>
             <h2>{contact.name}</h2>
-            <p>{contact.email}</p>
-            <p>{contact.phone}</p>
+            <p>Username: {contact.username}</p>
+            <p>Email: {contact.email}</p>
+            <p>Phone: {contact.phone}</p>
             <button onClick={() =>setSelectedContactId(null)}>Back</button>
-        </div>
+        </div> ) : <div></div>
     )
 }
